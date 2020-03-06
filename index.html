@@ -8,27 +8,53 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- Normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
+
+    <header class="container-fluid">
+        <video autoplay muted loop id="myVideo">
+            <source src="back.mp4" type="video/mp4">
+        </video>
+
+        <nav class="container">
             <div class="logo">
                 <img src="img/logo.png" alt="Logo">
             </div>
             <div class="navbar">
                 <ul>
                     <li><a href="#aboutUs">О нас</a></li>
-                    <li></li>
-                    <li></li>
+                    <li><a href="#advertisers">Рекламодателям</a></li>
+                    <li><a href="#webmasters">Веб-мастерам</a></li>
                 </ul>
             </div>
-            <div class="buttons"></div>
+            <div class="buttons">
+                <div class="buttons-language">
+                    <button class="buttons-language_active">RU</button>
+                    <button>EN</button>
+                </div>
+                <button class="buttons-enter">Вход</button>
+            </div>
         </nav>
-        <div>
 
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="circle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="header-text">
+                    <h1> CPA сеть LAGOON </h1>
+                    <p> Эффективный маркетинг </p>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -53,6 +79,10 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Main script -->
+    <script src="./script.js"></script>
+
 </body>
 
 </html>

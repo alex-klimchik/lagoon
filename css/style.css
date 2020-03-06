@@ -1,4 +1,182 @@
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: url('../fonts/Avenir.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr light';
+    src: local('../fonts/Avenir Next Thin'), local('../fonts/Avenir-Next-Thin'), url('../fonts/AvenirNextCyr-Thin.woff2') format('woff2'), url('../fonts/AvenirNextCyr-Thin.woff') format('woff'), url('../fonts/AvenirNextCyr-Thin.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
 /* ------------ Header ------------------ */
+
+header {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(180deg, #024D83 0%, rgba(221, 241, 255, 0) 80.18%);
+    overflow-x: hidden;
+}
+
+header video#myVideo {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 93px;
+}
+
+header nav .logo img {
+    width: 77px;
+}
+
+header nav .navbar {
+    font-family: Avenir Next Cyr;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+}
+
+header nav .navbar ul {
+    list-style: none;
+    display: flex;
+    width: 370px;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+}
+
+header nav .navbar ul li a {
+    color: #fff;
+}
+
+header nav .buttons {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav .buttons .buttons-language {
+    display: flex;
+    justify-content: center;
+    padding: 6px 0;
+}
+
+header nav .buttons .buttons-language button {
+    font-family: 'Avenir Next Cyr light';
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    border: none;
+    background-color: unset;
+    margin: 0 2px;
+}
+
+.buttons-language_active, header nav .buttons .buttons-language button:hover {
+    font-family: 'Avenir Next Cyr'!important;
+    font-weight: bold;
+    background-color: #1AE5BE!important;
+    border-radius: 10px;
+}
+
+header nav .buttons .buttons-enter {
+    width: 160px;
+    border: 3px solid #1CE3BF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: unset;
+    font-family: 'Avenir Next Cyr';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    outline: none;
+    transition: .2s all ease-out;
+}
+
+header nav .buttons .buttons-enter:hover {
+    background: #1CE3BF;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: calc( 50vh - 218px );
+}
+
+.header-wrapper .circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 1px solid #FFFFFF;
+    position: relative;
+}
+
+.header-wrapper .circle span {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.header-wrapper .circle span:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    top: 25px;
+    left: 25px;
+    border: 1px solid #BEBEBE;
+}
+
+.header-wrapper .circle span:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    top: 50px;
+    left: 50px;
+    background: rgba(26, 229, 190, 0.7);
+}
+
+.header-wrapper .circle span:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    top: 100px;
+    left: 100px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.header-wrapper .header-text h1 {
+    font-family: 'Avenir Next Cyr';
+    font-style: normal;
+    font-weight: 750;
+    font-size: 64px;
+    line-height: 78px;
+    color: #FDFDFD;
+    opacity: 0.5;
+    margin: 0;
+}
+
+.header-wrapper .header-text {
+    font-family: 'Avenir Next Cyr';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 36px;
+    line-height: 44px;
+    color: #FDFDFD;
+    margin-top: 60px;
+    margin-left: 35px;
+}
 
 /* ------------ About us ---------------- */
 
