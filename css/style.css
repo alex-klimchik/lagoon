@@ -19,9 +19,9 @@
     font-style: normal;
 }
 
+
 /* ------------ Header ------------------ */
 
-<<<<<<< HEAD
 header {
     position: relative;
     height: 100vh;
@@ -91,7 +91,8 @@ header nav .buttons .buttons-language button {
     margin: 0 2px;
 }
 
-.buttons-language_active, header nav .buttons .buttons-language button:hover {
+.buttons-language_active,
+header nav .buttons .buttons-language button:hover {
     font-family: 'Avenir Next Cyr Bold'!important;
     background-color: #1AE5BE!important;
     border-radius: 10px;
@@ -212,15 +213,16 @@ header nav .buttons .buttons-enter:hover {
     .header-wrapper .header-text p {
         font-size: 27px;
     }
-    header nav .buttons .buttons-enter{
+    header nav .buttons .buttons-enter {
         width: 100px;
     }
-    header nav .buttons{
+    header nav .buttons {
         width: 190px;
     }
 }
+
 @media (max-width: 767px) {
-    .mobile-enter{
+    .mobile-enter {
         width: 44px;
         height: 44px;
         display: flex;
@@ -230,9 +232,8 @@ header nav .buttons .buttons-enter:hover {
         border-radius: 50%;
     }
 }
-=======
 
->>>>>>> developer
+
 /* ------------ About us ---------------- */
 
 
@@ -252,7 +253,7 @@ header nav .buttons .buttons-enter:hover {
 }
 
 .advantages-bk {
-    font-family: Avenir Next Cyr;
+    font-family: 'Avenir Next Cyr Bold';
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -292,7 +293,7 @@ header nav .buttons .buttons-enter:hover {
 
 .title-text {
     padding: 20px 0px 0px 17px;
-    font-family: Avenir Next Cyr;
+    font-family: 'Avenir Next Cyr Bold';
     font-style: normal;
     font-weight: 750;
     font-size: 26px;
