@@ -1,12 +1,19 @@
 @font-face {
-    font-family: 'Avenir Next Cyr';
-    src: url('../fonts/Avenir.ttf');
-    font-weight: bold;
+    font-family: 'Avenir Next Cyr Bold';
+    src: url('../fonts/AvenirNextCyr-Bold.ttf');
+    font-weight: 750;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Avenir Next Cyr light';
+    font-family: 'Avenir Next Cyr Regular';
+    src: url('../fonts/Avenir.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr Light';
     src: local('../fonts/Avenir Next Thin'), local('../fonts/Avenir-Next-Thin'), url('../fonts/AvenirNextCyr-Thin.woff2') format('woff2'), url('../fonts/AvenirNextCyr-Thin.woff') format('woff'), url('../fonts/AvenirNextCyr-Thin.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
@@ -42,9 +49,7 @@ header nav .logo img {
 }
 
 header nav .navbar {
-    font-family: Avenir Next Cyr;
-    font-style: normal;
-    font-weight: bold;
+    font-family: 'Avenir Next Cyr Regular';
     font-size: 18px;
     line-height: 22px;
     color: white;
@@ -76,8 +81,7 @@ header nav .buttons .buttons-language {
 }
 
 header nav .buttons .buttons-language button {
-    font-family: 'Avenir Next Cyr light';
-    font-weight: 200;
+    font-family: 'Avenir Next Cyr Light';
     font-size: 18px;
     line-height: 22px;
     color: #fff;
@@ -87,8 +91,7 @@ header nav .buttons .buttons-language button {
 }
 
 .buttons-language_active, header nav .buttons .buttons-language button:hover {
-    font-family: 'Avenir Next Cyr'!important;
-    font-weight: bold;
+    font-family: 'Avenir Next Cyr Bold'!important;
     background-color: #1AE5BE!important;
     border-radius: 10px;
 }
@@ -99,24 +102,29 @@ header nav .buttons .buttons-enter {
     box-sizing: border-box;
     border-radius: 10px;
     background-color: unset;
-    font-family: 'Avenir Next Cyr';
-    font-style: normal;
-    font-weight: 400;
+    font-family: 'Avenir Next Cyr Regular';
     font-size: 18px;
     line-height: 22px;
     color: #fff;
     outline: none;
-    transition: .2s all ease-out;
+    letter-spacing: .75px;
 }
 
 header nav .buttons .buttons-enter:hover {
     background: #1CE3BF;
+    font-family: 'Avenir Next Cyr Bold';
+    letter-spacing: 0;
 }
 
 .header-wrapper {
     display: flex;
     align-items: center;
-    margin-top: calc( 50vh - 218px );
+    margin-top: calc( 50vh - 218px);
+}
+
+.header-wrapper .circle span {
+    position: absolute;
+    border-radius: 50%;
 }
 
 .header-wrapper .circle {
@@ -125,11 +133,7 @@ header nav .buttons .buttons-enter:hover {
     border-radius: 50%;
     border: 1px solid #FFFFFF;
     position: relative;
-}
-
-.header-wrapper .circle span {
-    position: absolute;
-    border-radius: 50%;
+    flex-shrink: 0;
 }
 
 .header-wrapper .circle span:nth-child(1) {
@@ -157,9 +161,7 @@ header nav .buttons .buttons-enter:hover {
 }
 
 .header-wrapper .header-text h1 {
-    font-family: 'Avenir Next Cyr';
-    font-style: normal;
-    font-weight: 750;
+    font-family: 'Avenir Next Cyr Bold';
     font-size: 64px;
     line-height: 78px;
     color: #FDFDFD;
@@ -167,17 +169,66 @@ header nav .buttons .buttons-enter:hover {
     margin: 0;
 }
 
-.header-wrapper .header-text {
-    font-family: 'Avenir Next Cyr';
-    font-style: normal;
-    font-weight: 450;
+.header-wrapper .header-text p {
+    font-family: 'Avenir Next Cyr Regular';
     font-size: 36px;
     line-height: 44px;
     color: #FDFDFD;
+}
+
+.header-wrapper .header-text {
     margin-top: 60px;
     margin-left: 35px;
 }
 
+@media (max-width: 991px) {
+    .header-wrapper .circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+    .header-wrapper .circle span:nth-child(1) {
+        width: 125px;
+        height: 125px;
+        top: 12.5px;
+        left: 12.5px;
+    }
+    .header-wrapper .circle span:nth-child(2) {
+        width: 100px;
+        height: 100px;
+        top: 25px;
+        left: 25px;
+    }
+    .header-wrapper .circle span:nth-child(3) {
+        width: 25px;
+        height: 25px;
+        top: 62.5px;
+        left: 62.5px;
+    }
+    .header-wrapper .header-text h1 {
+        font-size: 48px;
+    }
+    .header-wrapper .header-text p {
+        font-size: 27px;
+    }
+    header nav .buttons .buttons-enter{
+        width: 100px;
+    }
+    header nav .buttons{
+        width: 190px;
+    }
+}
+@media (max-width: 767px) {
+    .mobile-enter{
+        width: 44px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #1AE5BE;
+        border-radius: 50%;
+    }
+}
 /* ------------ About us ---------------- */
 
 /* ------------ Advertisers ------------- */
