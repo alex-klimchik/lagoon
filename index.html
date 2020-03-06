@@ -13,30 +13,39 @@
 
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 </head>
 
 <body>
 
 
-    <header class="container-fluid">
+    <header>
         <video autoplay muted loop id="myVideo">
             <source src="back.mp4" type="video/mp4">
         </video>
 
-        <nav class="container">
+        <nav class="container-md">
             <div class="logo">
                 <img src="img/logo.png" alt="Logo">
+                <p class="d-md-none">LAGOON</p>
             </div>
             <div class="navbar">
-                <ul>
+                <button class="mobile-navbar d-md-none">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <ul class="d-none d-md-flex">
                     <li><a href="#aboutUs">О нас</a></li>
                     <li><a href="#advertisers">Рекламодателям</a></li>
                     <li><a href="#webmasters">Веб-мастерам</a></li>
                 </ul>
             </div>
             <div class="buttons">
-                <div class="mobile-enter d-md-none"><i class="fa fa-user"></i></div>
-                <div class="buttons-language d-none d-md-block">
+                <button class="mobile-enter d-md-none">
+                    <i class="fa fa-user"></i>
+                </button>
+                <div class="buttons-language d-none d-md-flex">
                     <button class="buttons-language_active">RU</button>
                     <button>EN</button>
                 </div>
@@ -46,7 +55,7 @@
 
         <div class="container">
             <div class="header-wrapper">
-                <div class="circle">
+                <div class="circle d-none d-md-block">
                     <span></span>
                     <span></span>
                     <span></span>
