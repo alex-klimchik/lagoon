@@ -21,6 +21,7 @@
 
 /* ------------ Header ------------------ */
 
+<<<<<<< HEAD
 header {
     position: relative;
     height: 100vh;
@@ -229,12 +230,87 @@ header nav .buttons .buttons-enter:hover {
         border-radius: 50%;
     }
 }
+=======
+
+>>>>>>> developer
 /* ------------ About us ---------------- */
+
 
 /* ------------ Advertisers ------------- */
 
+.adver-bk {
+    width: 550px;
+    height: 500px;
+    left: 166px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #DDFCEE 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.icons-bk {
+    width: 380px;
+}
+
+.advantages-bk {
+    font-family: Avenir Next Cyr;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.advantages-bk li {
+    margin: 20px 0px;
+    display: flex;
+    list-style-type: none;
+}
+
+.advantages-bk img {
+    width: 60px;
+}
+
+.advantages-bk li a {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    padding-left: 20px;
+}
+
+.main-text {
+    padding: 0px 15px 0px 15px;
+    font-family: Avenir Next Cyr;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    color: #282626;
+}
+
+.main-text b {
+    font-size: 23px;
+}
+
+.title-text {
+    padding: 20px 0px 0px 17px;
+    font-family: Avenir Next Cyr;
+    font-style: normal;
+    font-weight: 750;
+    font-size: 26px;
+    line-height: 44px;
+    color: #777777;
+}
+
+.adv-main {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
 /* ------------ Webmasters ---------------*/
 
+
 /* ------------ Form ---------------------*/
+
 
 /* ------------ Footer -------------------*/
