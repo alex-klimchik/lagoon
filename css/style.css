@@ -1,11 +1,180 @@
+html {
+    background: #fff;
+}
 /* ------------ Header ------------------ */
 
 /* ------------ About us ---------------- */
+.bg-block{
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../img/bg-main.png");
+    background-position-y: bottom;
+    background-blend-mode: hard-light;
+}
+.aboutUs-title h2 ,
+.webmaster-title h2{
+    font-family: Avenir Next Cyr;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #777777;
+    padding-left: 20px;
+}
+.aboutUs-content p,
+.aboutUs-content p{
+    font-family: Avenir Next Cyr;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #282626;
+}
+.aboutUs-ft p{
+    font-family: Avenir Next Cyr;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    color: #404040;
+    padding: 24px 0 40px;
+}
 
 /* ------------ Advertisers ------------- */
 
 /* ------------ Webmasters ---------------*/
+.webmasters-mob{
+    display: none;
+}
+.bg-master{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/bg-master.png");
+}
+.webmaster-wrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+.webmaster-title{
+    margin-bottom: 25px;
+}
+.web-content-wrap{
+    width: 84%;
+}
+.webmaster-content-hid{
+    display: block;
+}
+.webmaster-content-mob{
+    display: none;
+}
+.webmaster-ft{
+    font-family: Avenir Next Cyr;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    color: #404040;
+    padding-top: 24px;
+}
+.webmaster-skills-wrap{
+    margin-left: 35px;
+    margin-top: 45px;
+}
+.webmaster-skills{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 18px;
+}
+.webmaster-icon img{
+    width: 70px;
+    height: 70px;
+}
+.icon-m{
+    margin-left: -5px;
+}
+.web-skills-content{
+    width: 75%;
+    padding: 0 0 0 15px;
+}
+.web-skills-content p{
+    font-family: Avenir Next Cyr;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #282626;
+}
+
 
 /* ------------ Form ---------------------*/
 
 /* ------------ Footer -------------------*/
+@media ( max-width: 998px) {
+    .web-content-wrap,
+    .web-skills-content{
+        width: 90%;
+    }
+    .webmaster-skills-wrap {
+        margin-left: 0;
+    }
+    .webmaster-icon img{
+        width: 65px;
+        height: 65px;
+    }
+}
+@media ( max-width: 767px) {
+    .bg-block {
+        background-position-y: center;
+    }
+    .webmaster-wrap {
+        display: block;
+    }
+    .bg-master{
+        background-image: none;
+    }
+    .web-content-wrap,
+    .web-skills-content{
+        width: 100%;
+    }
+    .web-content-wrap{
+        padding: 40px 0;
+    }
+    .webmaster-content-hid{
+        display: none;
+    }
+    .webmaster-content-mob{
+        display: block;
+    }
+    .webmasters-mob{
+        display: block;
+        padding: 40px 0;
+    }
+    .bg-master-mob{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("../img/bg-master-mob.png");
+    }
+}
+@media ( max-width: 556px) {
+    .aboutUs-title h2,
+    .webmaster-title h2{
+        padding-left: 0;
+    }
+    .bg-block{
+        background-position-y: center;
+        background-image: url("../img/bg-main-mob.png");
+    }
+    .webmaster-skills-wrap {
+        margin-left: 22px;
+    }
+}
+@media ( max-width: 480px) {
+    .webmaster-icon img{
+        width: 50px;
+        height: 50px;
+    }
+}
