@@ -19,6 +19,160 @@
     font-style: normal;
 }
 
+body {
+    position: relative;
+}
+
+/* ------------- Form --------------- */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 101;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form-wrapper {
+    cursor: default;
+    width: 100%;
+    max-width: 382px;
+    min-height: 371px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(28, 227, 191, 1) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.form-wrapper form {
+    width: 240px;
+}
+
+#recovery, #enter, #toRegister {
+    display: none;
+}
+
+.form-wrapper form input {
+    width: 100%;
+    border: 2px solid #D4E1F4;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 45px;
+    padding: 0 10px;
+    outline: none;
+}
+
+.form-wrapper form input::placeholder {
+    font-family: 'Avenir Next Cyr Light';
+    color: #DADADA;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.form-wrapper form input[type="text"] {
+    margin-bottom: 22px;
+}
+
+.form-wrapper form input[type="password"] {
+    margin-bottom: 13px;
+}
+
+.form-wrapper form .btns {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-wrapper form .btns span {
+    text-transform: uppercase;
+    font-family: 'Avenir Next Cyr Bold';
+    font-size: 18px;
+    line-height: 22px;
+    color: #bebebe;
+    border-bottom: 1px solid #bebebe;
+    cursor: pointer;
+}
+
+.form-wrapper form .btns span:first-child {
+    margin-right: 15px;
+}
+
+.form-wrapper form .btns .active {
+    color: #777777;
+    font-size: 24px;
+    line-height: 29px;
+    border-bottom: none;
+}
+
+.form-wrapper form .forgot {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.form-wrapper form .forgot span {
+    font-family: 'Avenir Next Cyr Light';
+    color: #DADADA;
+    border-bottom: 1px solid #dadada;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.form-wrapper form .forgot span:hover {
+    font-family: 'Avenir Next Cyr Bold';
+    color: #777777;
+    border-bottom: 1px solid #777777;
+}
+
+.form-wrapper form .mainBtn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 33px;
+}
+
+.form-wrapper form .mainBtn button {
+    background: #1CE3BF;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 23px;
+    font-family: 'Avenir Next Cyr Bold';
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 22px;
+    white-space: nowrap;
+    outline: none;
+}
+
+.recovery-text {
+    font-family: 'Avenir Next Cyr Bold';
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #777777;
+    margin-top: 49px;
+    margin-bottom: 58px;
+}
+
+.recovery-error {
+    font-family: 'Avenir Next Cyr Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FF3737;
+    text-align: center;
+    visibility: hidden;
+}
+
 /* ------------ Header ------------------ */
 
 header {
@@ -295,6 +449,7 @@ header nav .buttons .buttons-enter:hover {
         text-align: center;
     }
 }
+
 @media (max-width: 555px) {
     .header-wrapper .header-text p {
         font-size: 24px;
@@ -305,6 +460,7 @@ header nav .buttons .buttons-enter:hover {
         line-height: 2;
     }
 }
+
 @media (max-width: 360px) {
     .header-wrapper .header-text p {
         font-size: 17px;
