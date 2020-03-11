@@ -1,7 +1,3 @@
-html {
-    background: #fff;
-}
-
 @font-face {
     font-family: 'Avenir Next Cyr Bold';
     src: url('../fonts/AvenirNextCyr-Bold.ttf');
@@ -845,9 +841,30 @@ header nav .buttons .buttons-enter:hover {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     height: 726px;
-    background: url(/img/Group-form.png);
+    background: url('../img/Group-form.png');
     align-items: center;
     background-size: cover;
+}
+
+.form .choice-person {
+    font-size: 18px;
+    line-height: 22px;
+    font-family: 'Avenir Next Cyr Regular';
+    display: flex;
+    justify-content: space-around;
+}
+
+.form .choice-person label {
+    cursor: pointer;
+}
+
+.form .choice-person input[type="radio"]:checked~label {
+    color: #1AE5BE;
+    border-bottom: 1px solid #B7C5FF;
+}
+
+.form .choice-person input[type="radio"] {
+    display: none;
 }
 
 .bk-form-header {
@@ -878,6 +895,7 @@ header nav .buttons .buttons-enter:hover {
     line-height: 22px;
     border: 2px solid #959595!important;
     margin-top: 25px;
+    border-radius: 10px;
 }
 
 .check-role {
@@ -889,25 +907,38 @@ header nav .buttons .buttons-enter:hover {
     font-size: 18px;
 }
 
-.input-bk-forms::-webkit-input-placeholder {
+.input-bk-forms::-webkit-input-placeholder,
+#select-social-network {
     /* Edge */
-    color: #DADADA;
+    color: #adadad;
 }
 
-.input-bk-forms:-ms-input-placeholder {
+.input-bk-forms:-ms-input-placeholder,
+#select-social-network {
     /* Internet Explorer 10-11 */
-    color: #DADADA;
+    color: #adadad;
 }
 
-.input-bk-forms::placeholder {
-    color: #DADADA;
+.input-bk-forms::placeholder,
+#select-social-network {
+    color: #adadad;
 }
 
-
-/* .bk-form-group {
-    display: flex;
-    justify-content: space-around;
-} */
+#select-social-network {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 45px;
+    padding: 0 10px;
+    outline: none;
+    font-family: 'Avenir Next Cyr Light';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    border: 2px solid #959595!important;
+    margin-top: 25px;
+}
 
 .center {
     display: flex;
