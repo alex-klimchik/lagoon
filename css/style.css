@@ -59,7 +59,7 @@ body {
     display: none;
 }
 
-.form-wrapper form input[type="text"], .form-wrapper form input[type="password"] {
+.form-wrapper form input[type="text"], .form-wrapper form input[type="password"], .form-wrapper form input[type="e-mail"] {
     width: 100%;
     border: 2px solid #D4E1F4;
     box-sizing: border-box;
@@ -76,7 +76,7 @@ body {
     line-height: 22px;
 }
 
-.form-wrapper form input[type="text"] {
+.form-wrapper form input[type="text"], .form-wrapper form input[type="e-mail"] {
     margin-bottom: 22px;
 }
 
@@ -164,8 +164,6 @@ body {
 
 .recovery-error {
     font-family: 'Avenir Next Cyr Regular';
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 17px;
     color: #FF3737;
@@ -224,6 +222,22 @@ body {
     padding: 0 10px;
     outline: none;
     margin-bottom: 22px;
+}
+
+.policy {
+    display: flex;
+    font-family: 'Avenir Next Cyr Regular';
+    margin-bottom: 10px;
+}
+
+.policy input {
+    margin-top: 10px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.policy a {
+    color: #e5e5e5;
 }
 
 /* ------------ Header ------------------ */
