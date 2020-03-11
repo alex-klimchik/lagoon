@@ -64,5 +64,38 @@ $(document).ready(function () {
         $('header nav .navbar>ul').toggleClass('d-none');
     });
 
-    
+    $('.btn-bk-forms').click(function (e) {
+        e.preventDefault();
+        let form = $(this).closest('form');
+        let email, login, name, skype, telegram, password, confirm_password, type;
+        email = $(form).find('input[name="e-mail"]').val();
+        login = $(form).find('input[name="login"]').val();
+        name = $(form).find('input[name="name"]').val();
+        skype = $(form).find('input[name="skype"]').val();
+        password = $(form).find('input[name="password"]').val();
+        confirm_password = $(form).find('input[name="confirm_password"]').val();
+        type = $(form).find('.choice-person input[type="radio"]:checked').val();
+        $.ajax({
+            "url": "http://lagoon.me/api/register_user",
+            "method": "post",
+            "crossDomain": true,
+            "dataType": 'json',
+            "data": {
+                "email": email,
+                "login": login,
+                "name": name,
+                "skype": skype,
+                "password": password,
+                "confirm_password": confirm_password,
+                "type": type,
+            },
+            "success": function (data) {
+                console.log('success', data)
+            },
+            "error": function (data) {
+                console.log('error', data)
+            },
+        });
+        console.log(email, login, name, skype, telegram, password, confirm_password, type);
+    });
 });

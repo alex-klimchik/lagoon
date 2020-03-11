@@ -55,18 +55,18 @@
 
                 <div class="inputs">
                     <div>
-                        <input type="text" placeholder="Логин">
-                        <input type="text" placeholder="Имя">
-                        <input type="text" placeholder="Пароль">
+                        <input type="text" name='login' placeholder="Логин">
+                        <input type="text" name="name" placeholder="Имя">
+                        <input type="text" name="password" placeholder="Пароль">
                     </div>
                     <div>
-                        <input type="e-mail" placeholder="E-mail">
+                        <input type="e-mail" name="e-mail" placeholder="E-mail">
                         <!-- <select name="" id="">
                             <option value="skype">Skype</option>
                             <option value="telegram">Telegram</option>
                         </select> -->
-                        <input type="text" placeholder="Skype">
-                        <input type="text" placeholder="Повторить пароль">
+                        <input type="text" name="skype" placeholder="Skype">
+                        <input type="text" name="confirm_password" placeholder="Повторить пароль">
                     </div>
                 </div>
                 <div class="policy">
@@ -110,7 +110,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <ul class="d-none d-md-flex">
-                    <span class="push_close"></span>
+                    <span class="menu_close"></span>
                     <li><a href="#aboutUs">О нас</a></li>
                     <li><a href="#advertisers">Рекламодателям</a></li>
                     <li><a href="#webmasters-mob">Веб-мастерам</a></li>
@@ -310,32 +310,32 @@
                     <div class="tab-pane container active" id="home">
                         <form action="/action_page.php">
                             <div class="choice-person"><span>
-                                <input name="choice-person_input_two" id="advertizer2" type="radio" value="1" checked>
+                                <input name="choice-person_input_two" id="advertizer2" type="radio" value="adv" checked>
                                 <label for="advertizer2">Рекламодатель</label>
                             </span>
                                 <span>
-                                <input name="choice-person_input_two" id="web2" type="radio" value="2">
+                                <input name="choice-person_input_two" id="web2" type="radio" value="web">
                                 <label for="web2">Веб - мастер</label>
                             </span>
                             </div>
                             <div class="bl-forms">
-
+                                  
                                 <div class="bk-form-group">
 
-                                    <input type="text" class="form-control input-bk-forms" placeholder="Логин">
+                                    <input type="text" class="form-control input-bk-forms" name='login' placeholder="Логин">
 
-                                    <input type="text" class="form-control input-bk-forms" placeholder="Имя">
+                                    <input type="text" class="form-control input-bk-forms" name="name" placeholder="Имя">
 
-                                    <input type="password" class="form-control input-bk-forms" placeholder="Пароль">
+                                    <input type="password" class="form-control input-bk-forms" name="password" placeholder="Пароль">
                                 </div>
 
                                 <div class="bk-form-group">
 
-                                    <input type="email" class="form-control input-bk-forms" placeholder="E-mail">
+                                    <input type="email" class="form-control input-bk-forms" name="e-mail" placeholder="E-mail">
 
-                                    <input type="text" class="form-control input-bk-forms" placeholder="Skype">
+                                    <input type="text" class="form-control input-bk-forms" name="skype" placeholder="Skype">
 
-                                    <input type="password" class="form-control input-bk-forms" placeholder="Повторить пароль">
+                                    <input type="password" class="form-control input-bk-forms" name="confirm_password" placeholder="Повторить пароль">
 
                                 </div>
                             </div>
