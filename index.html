@@ -8,27 +8,128 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- Normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 </head>
 
 <body>
+    <div class="overlay" style="display: none;">
+        <div class="form-wrapper">
+
+            <form id="enter" action="">
+                <div class="btns">
+                    <span class="active">Вход</span>
+                    <span class="">регистрация</span>
+                </div>
+                <input type="text" name="login" placeholder="Логин" required>
+                <input type="password" name="password" placeholder="Пароль" required>
+                <div class="forgot">
+                    <span id="forgotPassword">Забыли пароль?</span>
+                </div>
+                <div class="mainBtn">
+                    <button>Вход</button>
+                </div>
+            </form>
+
+            <form id="toRegister" action="">
+                <div class="btns">
+                    <span class="">Вход</span>
+                    <span class="active">регистрация</span>
+                </div>
+                <div class="choice-person"><span>
+                        <input name="choice-person_input" id="advertizer" type="radio" value="1" checked>
+                        <label for="advertizer">Рекламодатель</label>
+                    </span>
+                    <span>
+                        <input name="choice-person_input" id="web" type="radio" value="2">
+                        <label for="web">Веб - мастер</label>
+                    </span>
+                </div>
+
+                <div class="inputs">
+                    <div>
+                        <input type="text" placeholder="Логин">
+                        <input type="text" placeholder="Имя">
+                        <input type="text" placeholder="Пароль">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="E-mail">
+                        <select name="" id="">
+                            <option value="skype">Skype</option>
+                            <option value="telegram">Telegram</option>
+                        </select>
+                        <input type="text" placeholder="Повторить пароль">
+                    </div>
+                </div>
+                <div class="mainBtn">
+                    <button>Регистрация</button>
+                </div>
+            </form>
+
+            <form id="recovery" action="">
+                <p class="recovery-text">ВОССТАНОВЛЕНИЕ ПАРОЛЯ</p>
+                <input type="text" name="email" placeholder="Введите Ваш E-mail">
+                <p class="recovery-error">
+                    Необходимо заполнить E-mail
+                </p>
+                <div class="mainBtn">
+                    <button>Восстановить пароль</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <header>
-        <nav>
+        <video autoplay muted loop id="myVideo">
+            <source src="back.mp4" type="video/mp4">
+        </video>
+
+        <nav class="container-md">
             <div class="logo">
                 <img src="img/logo.png" alt="Logo">
+                <p class="d-md-none">LAGOON</p>
             </div>
             <div class="navbar">
-                <ul>
+                <button class="mobile-navbar d-md-none">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <ul class="d-none d-md-flex">
                     <li><a href="#aboutUs">О нас</a></li>
-                    <li></li>
-                    <li></li>
+                    <li><a href="#advertisers">Рекламодателям</a></li>
+                    <li><a href="#webmasters">Веб-мастерам</a></li>
                 </ul>
             </div>
-            <div class="buttons"></div>
+            <div class="buttons">
+                <button class="mobile-enter d-md-none">
+                    <i class="fa fa-user"></i>
+                </button>
+                <div class="buttons-language d-none d-md-flex">
+                    <button class="buttons-language_active">RU</button>
+                    <button>EN</button>
+                </div>
+                <button class="buttons-enter d-none d-md-block">Вход</button>
+            </div>
         </nav>
-        <div>
 
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="circle d-none d-md-block">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="header-text">
+                    <h1> CPA сеть LAGOON </h1>
+                    <p> Эффективный маркетинг </p>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -42,7 +143,8 @@
                                 <h2>О нас</h2>
                             </div>
                             <div class="aboutUs-content">
-                                <p>Основная задача нашей компании - предоставить нашим партнерам наиболее подходящие маркетинговые решения, разработанные специально для их индивидуальных потребностей.</p>
+                                <p>Основная задача нашей компании - предоставить нашим партнерам наиболее подходящие маркетинговые решения, разработанные специально для их индивидуальных потребностей.
+                                </p>
                                 <p>Мы разработали собственную платформу, которая постоянно обновляется и дополняется новым функционалом, ориентированным на успешный результат рекламных кампаний.</p>
                             </div>
                             <div class="aboutUs-ft">
@@ -54,95 +156,264 @@
                 </div>
             </div>
         </section>
-        <section id="advertisers"></section>
+        <section id="advertisers">
+            <div class="container adv-main">
+
+                <div class="adver-bk">
+                    <p class="title-text">РЕКЛАМОДАТЕЛЯМ</p>
+                    <p class="main-text">Мы специализируемся на привлечении целевых клиентов и устраняем все источники мошеннического трафика, благодаря чему вы получаете высококачественный, стабильный и масштабируемый трафик.
+                    </p>
+                    <p class="main-text">Наша команда маркетологов имеет большой опыт создания конкурентоспособных предложений на основе мониторинга рынка и тестирования производительности продвижения в различных источниках трафика, что помогает достигать высоких результатов
+                        и качественный пользовательский опыт.</p>
+                    <p class="main-text bl-text"> <b>Присоединяйтесь к нам уже сегодня для долгосрочного
+                            сотрудничества!</b></p>
+
+                </div>
+                <div class="icons-bk">
+                    <ul class="advantages-bk">
+                        <li>
+                            <div class="ico-bk"><img src="img/public-relation.png"></div><a>Оперативная техническая и
+                                клиентская поддержка </a>
+                        </li>
+                        <li>
+                            <div class="ico-bk"> <img src="img/global.png"></div><a>Контроль качества трафика -
+                                анти-фрод система</a>
+                        </li>
+                        <li>
+                            <div class="ico-bk"> <img src="img/add.png"></div> <a>API - интеграция</a>
+                        </li>
+                        <li>
+                            <div class="ico-bk"><img src="img/dollar.png"></div><a>Оплата за реальный результат</a>
+                        </li>
+                        <li>
+                            <div class="ico-bk"> <img src="img/value.png"></div><a>Мы подберем клиентов под любой
+                                продукт и поможем его продвинуть</a>
+                        </li>
+                        <li>
+                            <div class="ico-bk"> <img src="img/users.png"></div> <a>Максимально прозрачная
+                                статистика</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
         <section id="webmasters-mob" class="bg-master-mob">
             <div class="container">
-            <div class="webmaster-content-mob">
-                <div class="web-content-wrap">
-                    <div class="webmaster-title">
-                        <h2>ВЕБ-МАСТЕРАМ</h2>
-                    </div>
-                    <div class="webmaster-content">
-                        <p>Работая с нами вы получаете доступ к лучшим предложениям на рынке.</p>
-                        <p>Наша платформа содержит необходимые инструменты для эффективного заработка.</p>
-                        <p>Используя которые, вы получаете максимальный доход.</p>
-                        <p>И помогает вам в этом, дружелюбная поддержка персонального менеджера.</p>
-                    </div>
-                    <div class="webmaster-ft">
-                        <p>Присоединяйтесь к нам, для максимальной монетизации вашего трафика.</p>
+                <div class="webmaster-content-mob">
+                    <div class="web-content-wrap">
+                        <div class="webmaster-title">
+                            <h2>ВЕБ-МАСТЕРАМ</h2>
+                        </div>
+                        <div class="webmaster-content">
+                            <p>Работая с нами вы получаете доступ к лучшим предложениям на рынке.</p>
+                            <p>Наша платформа содержит необходимые инструменты для эффективного заработка.</p>
+                            <p>Используя которые, вы получаете максимальный доход.</p>
+                            <p>И помогает вам в этом, дружелюбная поддержка персонального менеджера.</p>
+                        </div>
+                        <div class="webmaster-ft">
+                            <p>Присоединяйтесь к нам, для максимальной монетизации вашего трафика.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         </section>
 
         <section id="webmasters" class="bg-master">
             <div class="container">
-               <div class="webmaster-wrap">
+                <div class="webmaster-wrap">
 
-                   <div class="webmaster-content-hid">
-                       <div class="web-content-wrap">
-                           <div class="webmaster-title">
-                               <h2>ВЕБ-МАСТЕРАМ</h2>
-                           </div>
-                           <div class="webmaster-content">
-                               <p>Работая с нами вы получаете доступ к лучшим предложениям на рынке.</p>
-                               <p>Наша платформа содержит необходимые инструменты для эффективного заработка.</p>
-                               <p>Используя которые, вы получаете максимальный доход.</p>
-                               <p>И помогает вам в этом, дружелюбная поддержка персонального менеджера.</p>
-                           </div>
-                           <div class="webmaster-ft">
-                               <p>Присоединяйтесь к нам, для максимальной монетизации вашего трафика.</p>
-                           </div>
-                       </div>
-                   </div>
+                    <div class="webmaster-content-hid">
+                        <div class="web-content-wrap">
+                            <div class="webmaster-title">
+                                <h2>ВЕБ-МАСТЕРАМ</h2>
+                            </div>
+                            <div class="webmaster-content">
+                                <p>Работая с нами вы получаете доступ к лучшим предложениям на рынке.</p>
+                                <p>Наша платформа содержит необходимые инструменты для эффективного заработка.</p>
+                                <p>Используя которые, вы получаете максимальный доход.</p>
+                                <p>И помогает вам в этом, дружелюбная поддержка персонального менеджера.</p>
+                            </div>
+                            <div class="webmaster-ft">
+                                <p>Присоединяйтесь к нам, для максимальной монетизации вашего трафика.</p>
+                            </div>
+                        </div>
+                    </div>
 
-                   <div class="webmaster-skills-wrap">
-                       <div class="webmaster-skills">
-                           <div class="webmaster-icon">
-                               <img src="img/master1.png" class="icon-m">
-                           </div>
-                           <div class="web-skills-content">
-                               <p>Авторские оффера и лояльные условия</p>
-                           </div>
-                       </div>
+                    <div class="webmaster-skills-wrap">
+                        <div class="webmaster-skills">
+                            <div class="webmaster-icon">
+                                <img src="img/master1.png" class="icon-m">
+                            </div>
+                            <div class="web-skills-content">
+                                <p>Авторские оффера и лояльные условия</p>
+                            </div>
+                        </div>
 
-                       <div class="webmaster-skills">
-                           <div class="webmaster-icon">
-                               <img src="img/master2.png">
-                           </div>
-                           <div class="web-skills-content">
-                               <p>Своевременные платежи</p>
-                           </div>
-                       </div>
+                        <div class="webmaster-skills">
+                            <div class="webmaster-icon">
+                                <img src="img/master2.png">
+                            </div>
+                            <div class="web-skills-content">
+                                <p>Своевременные платежи</p>
+                            </div>
+                        </div>
 
-                       <div class="webmaster-skills">
-                           <div class="webmaster-icon">
-                               <img src="img/master3.png">
-                           </div>
-                           <div class="web-skills-content">
-                               <p>Высокий уровень поддержки персонального менеджера</p>
-                           </div>
-                       </div>
+                        <div class="webmaster-skills">
+                            <div class="webmaster-icon">
+                                <img src="img/master3.png">
+                            </div>
+                            <div class="web-skills-content">
+                                <p>Высокий уровень поддержки персонального менеджера</p>
+                            </div>
+                        </div>
 
-                       <div class="webmaster-skills">
-                           <div class="webmaster-icon">
-                               <img src="img/master4.png">
-                           </div>
-                           <div class="web-skills-content">
-                               <p>Детальная статистика</p>
-                           </div>
-                       </div>
+                        <div class="webmaster-skills">
+                            <div class="webmaster-icon">
+                                <img src="img/master4.png">
+                            </div>
+                            <div class="web-skills-content">
+                                <p>Детальная статистика</p>
+                            </div>
+                        </div>
 
-                   </div>
-               </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="form"></section>
+        <section class="form">
+            <div class="bk-form">
+                <div class="bk-form-header"></div>
+                <div class="bk-form-title">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs bk-form-">
+                        <li class="nav-item bk-from-title-registr">
+                            <a class="nav-link active" data-toggle="tab" href="#home">РЕГИСТРАЦИЯ</a>
+                        </li>
+                        <li class="nav-item bk-from-title-entrance">
+                            <a class="nav-link" data-toggle="tab" href="#menu1">ВХОД</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane container active" id="home">
+                        <form action="/action_page.php">
+                            <div class="check-role">
+                                <a>Рекламодатель</a>
+                                <a>Веб-мастер</a>
+                            </div>
+                            <div class="bl-forms">
+                                <div class="bk-form-group">
+
+                                    <input type="email" class="form-control input-bk-forms" placeholder="Логин" id="email">
+
+                                    <input type="password" class="form-control input-bk-forms" placeholder="Имя" id="pwd">
+
+                                    <input type="email" class="form-control input-bk-forms" placeholder="Пароль" id="email">
+                                </div>
+                                <div class="bk-form-group">
+
+
+                                    <input type="password" class="form-control input-bk-forms" placeholder="E-mail" id="pwd">
+
+                                    <input type="email" class="form-control input-bk-forms" placeholder="Skype" id="email">
+
+                                    <input type="password" class="form-control input-bk-forms" placeholder="Повторить пароль" id="pwd">
+
+                                </div>
+                            </div>
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox"> Я принимаю условия <a
+                                        href="#">Пользовательского соглашения</a> и даю своё согласие на обработку
+                                    персональных данных, определенных <a href="#">Политикой конфиденциальности</a>
+                                </label>
+                            </div>
+                            <div class="center">
+                                <button type="submit" class="btn btn-bk-forms">Регистрация</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane container fade" id="menu1">
+                        <form action="/action_page.php">
+                            <div class="check-role">
+                                <a>Рекламодатель</a>
+                                <a>Веб-мастер</a>
+                            </div>
+                            <div class="bl-forms">
+                                <div class="bk-form-group">
+
+                                    <input type="email" class="form-control input-bk-forms" placeholder="Логин" id="email">
+
+                                    <input type="password" class="form-control input-bk-forms" placeholder="Имя" id="pwd">
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="center">
+                                <button type="submit" class="btn btn-bk-forms">Вход</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="container-fluid footer-bk">
+
+            <div class="bottom-logo">
+                <img src="img/logo.png">
+            </div>
+            <div class="group-menu-social-icons">
+                <div class="bottom-menu">
+
+                    <ul>
+                        <li><a>О НАС</a></li>
+                        <li><a>РЕКЛАМОДАТЕЛЯМ</a></li>
+                    </ul>
+
+                </div>
+                <div class="bottom-menu">
+
+                    <ul>
+                        <li><a>ВЕБ-МАСТЕРАМ</a></li>
+                        <li><a>РЕГИСТРАЦИЯ</a></li>
+                    </ul>
+
+                </div>
+                <div class="icons-social-network">
+
+                    <ul>
+                        <li>
+                            <a><img src="img/mail.png"></a>
+                        </li>
+                        <li>
+                            <a><img src="img/linkedin.png"></a>
+                        </li>
+                        <li>
+                            <a><img src="img/skype.png"></a>
+                        </li>
+                        <li>
+                            <a><img src="img/telegram.png"></a>
+                        </li>
+                        <li>
+                            <a><img src="img/facebook.png"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="container bottom-name-company"> <a>© LAGOON 2020</a></div>
+    </footer>
 
 
 
@@ -154,6 +425,10 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Main script -->
+    <script src="./script.js"></script>
+
 </body>
 
 </html>
