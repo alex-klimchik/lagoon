@@ -59,7 +59,7 @@ $(document).ready(function () {
         $('#toRegister').css('display', 'none');
     });
 
-    // Кнопка "Меню?"
+    // Кнопка "Меню"
     $('.mobile-navbar').click(() => {
         $('header nav .navbar>ul').toggleClass('d-none');
     });

@@ -760,6 +760,16 @@ header nav .buttons .buttons-enter:hover {
     }
 }
 
+@media (max-width: 1000px) {
+    .bl-text b {
+        font-size: 16px;
+    }
+    .main-text {
+        line-height: 24px;
+    }
+}
+
+
 /* ------------ Webmasters ---------------*/
 
 .webmasters-mob {
@@ -914,10 +924,32 @@ header nav .buttons .buttons-enter:hover {
     display: flex;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    height: 726px;
+    padding: 20px;
     background: url('../img/Group-form.png');
     align-items: center;
     background-size: cover;
+}
+
+.form .choice-person {
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: 'Avenir Next Cyr Regular';
+    display: flex;
+    justify-content: space-around;
+}
+
+.form .choice-person label {
+    cursor: pointer;
+}
+
+.form .choice-person input[type="radio"]:checked~label {
+    color: #1AE5BE;
+    border-bottom: 1px solid #B7C5FF;
+}
+
+.form .choice-person input[type="radio"] {
+    display: none;
 }
 
 .bk-form-header {
@@ -927,8 +959,8 @@ header nav .buttons .buttons-enter:hover {
 }
 
 .bk-form {
+    width: 500px;
     height: 560px;
-    width: 550px;
     background: #FFFFFF;
     border: 1px solid #B7C5FF;
     box-sizing: border-box;
@@ -948,6 +980,7 @@ header nav .buttons .buttons-enter:hover {
     line-height: 22px;
     border: 2px solid #959595!important;
     margin-top: 25px;
+    border-radius: 10px;
 }
 
 .check-role {
@@ -959,24 +992,42 @@ header nav .buttons .buttons-enter:hover {
     font-size: 18px;
 }
 
-.input-bk-forms::-webkit-input-placeholder {
+.input-bk-forms::-webkit-input-placeholder,
+#select-social-network {
     /* Edge */
-    color: #DADADA;
+    color: #adadad;
 }
 
-.input-bk-forms:-ms-input-placeholder {
+.input-bk-forms:-ms-input-placeholder,
+#select-social-network {
     /* Internet Explorer 10-11 */
-    color: #DADADA;
+    color: #adadad;
 }
 
-.input-bk-forms::placeholder {
-    color: #DADADA;
+.input-bk-forms::placeholder,
+#select-social-network {
+    color: #adadad;
 }
 
 /* .bk-form-group {
     display: flex;
     justify-content: space-around;
 } */
+#select-social-network {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 45px;
+    padding: 0 10px;
+    outline: none;
+    font-family: 'Avenir Next Cyr Light';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    border: 2px solid #959595!important;
+    margin-top: 25px;
+}
 
 .center {
     display: flex;
@@ -1001,7 +1052,9 @@ header nav .buttons .buttons-enter:hover {
 }
 
 .form-check {
-    font-family: 'Avenir Next Cyr Light';
+    font-style: normal;
+    font-weight: normal;
+    font-family: 'Avenir Next Cyr Regular';
     padding: 20px;
     position: relative;
     display: block;
@@ -1015,19 +1068,56 @@ header nav .buttons .buttons-enter:hover {
     justify-content: space-around;
 }
 
-.form .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    border-color: #00000000;
-}
-
-.form .nav-tabs .nav-item {
-    font-family: 'Avenir Next Cyr Bold';
-    font-style: normal;
-    font-weight: 750;
+.form .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: #777777;
     font-size: 24px;
     line-height: 29px;
-    color: #777777;
-    text-align: left;
-    margin-bottom: -1px;
+    border-bottom: none;
+}
+
+.form .nav-link {
+    text-transform: uppercase;
+    font-family: 'Avenir Next Cyr Bold';
+    font-size: 18px;
+    line-height: 22px;
+    color: #bebebe;
+    border-bottom: 1px solid #bebebe;
+    cursor: pointer;
+}
+
+.form .nav-tabs .nav-item.show .nav-link,
+.form .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-color: #ffffff;
+}
+
+.form .nav-tabs .nav-link:focus,
+.form .nav-tabs .nav-link:hover {
+    border-color: #f0f8ff00 white #888888;
+}
+
+.form .form-check a {
+    color: #b4b4b4;
+    background-color: transparent;
+}
+
+.form .form-check a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .bk-form {
+        height: 100%;
+    }
+    .form-check {
+        padding: 0;
+    }
+    .bl-forms {
+        display: block;
+    }
 }
 
 /* ------------ Footer -------------------*/
