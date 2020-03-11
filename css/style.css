@@ -23,6 +23,7 @@ body {
     position: relative;
 }
 
+
 /* ------------- Form --------------- */
 
 .overlay {
@@ -55,11 +56,14 @@ body {
     margin: 0 70px;
 }
 
-#recovery, #enter, #toRegister {
+#recovery,
+#enter,
+#toRegister {
     display: none;
 }
 
-.form-wrapper form input[type="text"], .form-wrapper form input[type="password"] {
+.form-wrapper form input[type="text"],
+.form-wrapper form input[type="password"] {
     width: 100%;
     border: 2px solid #D4E1F4;
     box-sizing: border-box;
@@ -173,6 +177,7 @@ body {
     visibility: hidden;
 }
 
+
 /* toRefister */
 
 .form-wrapper #toRegister {
@@ -225,6 +230,7 @@ body {
     outline: none;
     margin-bottom: 22px;
 }
+
 
 /* ------------ Header ------------------ */
 
@@ -297,7 +303,8 @@ header nav .buttons .buttons-language button {
     margin: 0 2px;
 }
 
-.buttons-language_active, header nav .buttons .buttons-language button:hover {
+.buttons-language_active,
+header nav .buttons .buttons-language button:hover {
     font-family: 'Avenir Next Cyr Bold'!important;
     background-color: #1AE5BE!important;
     border-radius: 10px;
@@ -445,7 +452,8 @@ header nav .buttons .buttons-enter:hover {
 }
 
 @media (max-width: 767px) {
-    .mobile-enter, .mobile-navbar {
+    .mobile-enter,
+    .mobile-navbar {
         width: 44px;
         height: 44px;
         display: flex;
@@ -525,12 +533,294 @@ header nav .buttons .buttons-enter:hover {
     }
 }
 
+
 /* ------------ About us ---------------- */
+
 
 /* ------------ Advertisers ------------- */
 
+.adver-bk {
+    width: 550px;
+    height: 500px;
+    left: 166px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #DDFCEE 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.icons-bk {
+    width: 380px;
+}
+
+.advantages-bk {
+    font-family: 'Avenir Next Cyr Bold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.advantages-bk li {
+    margin: 20px 0px;
+    display: flex;
+    list-style-type: none;
+}
+
+.advantages-bk li:first-child {
+    margin: 0 0 20px 0;
+}
+
+.advantages-bk img {
+    width: 60px;
+}
+
+.advantages-bk li a {
+    display: flex;
+    align-items: center;
+    width: 230px;
+    padding-left: 20px;
+}
+
+.main-text {
+    padding: 0px 15px 0px 15px;
+    font-family: 'Avenir Next Cyr Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+    color: #282626;
+}
+
+.bl-text b {
+    font-family: 'Avenir Next Cyr Bold';
+    font-size: 23px;
+}
+
+.title-text {
+    font-family: 'Avenir Next Cyr Regular';
+    padding: 20px 0px 0px 17px;
+    font-style: normal;
+    font-weight: 750;
+    font-size: 26px;
+    line-height: 44px;
+    color: #777777;
+}
+
+.adv-main {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 767px) {
+    .adv-main {
+        display: grid;
+    }
+    .advantages-bk li a {
+        width: 100%;
+    }
+    .icons-bk {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .adver-bk {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .advantages-bk {
+        padding: 25px;
+    }
+    .bl-text {
+        text-align: center;
+    }
+    .title-text {
+        padding: 20px 0px 0px 15px;
+    }
+}
+
+
 /* ------------ Webmasters ---------------*/
+
 
 /* ------------ Form ---------------------*/
 
+.form {
+    justify-content: center;
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 726px;
+    background: url(/img/Group-form.png);
+    align-items: center;
+    background-size: cover;
+}
+
+.bk-form-header {
+    background: linear-gradient(180deg, #1CE3BF 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 10px 10px 0px 0px;
+    height: 40px;
+}
+
+.bk-form {
+    height: 560px;
+    width: 550px;
+    background: #FFFFFF;
+    border: 1px solid #B7C5FF;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.bl-forms {
+    display: flex;
+    justify-content: space-around;
+}
+
+.input-bk-forms {
+    font-family: 'Avenir Next Cyr Light';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    border: 2px solid #959595!important;
+    margin-top: 25px;
+}
+
+.check-role {
+    text-decoration: underline;
+    color: #1AE5BE;
+    font-family: 'Avenir Next Cyr Regular';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.input-bk-forms::-webkit-input-placeholder {
+    /* Edge */
+    color: #DADADA;
+}
+
+.input-bk-forms:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #DADADA;
+}
+
+.input-bk-forms::placeholder {
+    color: #DADADA;
+}
+
+
+/* .bk-form-group {
+    display: flex;
+    justify-content: space-around;
+} */
+
+.center {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.btn-bk-forms {
+    font-family: 'Avenir Next Cyr Regular';
+    font-style: normal;
+    font-weight: 750;
+    font-size: 24px;
+    line-height: 29px;
+    color: #F2F2F2;
+    background: #1AE5BE;
+    border-radius: 10px;
+}
+
+.check-role {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-check {
+    font-family: 'Avenir Next Cyr Light';
+    padding: 20px;
+    position: relative;
+    display: block;
+    padding-left: 1.25rem;
+    margin: 20px;
+}
+
+.form .nav-tabs {
+    display: flex;
+    border-bottom: none;
+    justify-content: space-around;
+}
+
+.form .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    border-color: #00000000;
+}
+
+.form .nav-tabs .nav-item {
+    font-family: 'Avenir Next Cyr Bold';
+    font-style: normal;
+    font-weight: 750;
+    font-size: 24px;
+    line-height: 29px;
+    color: #777777;
+    text-align: left;
+    margin-bottom: -1px;
+}
+
+
 /* ------------ Footer -------------------*/
+
+footer {
+    background: #777777;
+}
+
+.footer-bk {
+    display: flex;
+    justify-content: center;
+    padding: 20px 30px;
+}
+
+footer ul li {
+    margin: 5px;
+    list-style-type: none;
+}
+
+.icons-social-network ul li {
+    display: inline;
+}
+
+.icons-social-network {}
+
+.icons-social-network img {
+    width: 20px;
+}
+
+.bottom-logo {
+    display: flex;
+    align-items: center;
+}
+
+.bottom-menu {
+    color: #FDFDFD;
+}
+
+.group-menu-social-icons {
+    display: flex;
+}
+
+.bottom-name-company {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .group-menu-social-icons {
+        display: block;
+    }
+    .bottom-name-company {
+        justify-content: center;
+        display: flex;
+        color: #1AE5BE;
+        padding-bottom: 10px;
+    }
+}
