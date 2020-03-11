@@ -240,6 +240,39 @@ body {
     color: #e5e5e5;
 }
 
+/* push_close */
+
+.push_close {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.push_close:hover {
+    opacity: 1;
+}
+
+.push_close:before, .push_close:after {
+    position: absolute;
+    left: 9px;
+    content: ' ';
+    height: 20px;
+    width: 2px;
+    background-color: #1AE5BE;;
+}
+
+.push_close:before {
+    transform: rotate(45deg);
+}
+
+.push_close:after {
+    transform: rotate(-45deg);
+}
+
 /* ------------ Header ------------------ */
 
 header {
@@ -278,7 +311,6 @@ header nav .navbar {
 
 header nav .navbar ul {
     list-style: none;
-    display: flex;
     width: 370px;
     padding: 0;
     margin: 0;
@@ -515,6 +547,25 @@ header nav .buttons .buttons-enter:hover {
         justify-content: center;
         text-align: center;
     }
+    header nav .navbar>ul {
+        position: absolute;
+        top: 62px;
+        background: #fff;
+        left: -15px;
+        width: 225px;
+    }
+    header nav .navbar>ul li a {
+        color: #000000;
+        border-bottom: 1px solid #C4C4C4;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 45px;
+        padding-left: 24px;
+    }
+    header nav .navbar>ul li:last-child a {
+        border-bottom: 1px solid #C4C4C4;
+    }
 }
 
 @media (max-width: 555px) {
@@ -525,6 +576,33 @@ header nav .buttons .buttons-enter:hover {
     .header-wrapper .header-text h1 {
         font-size: 37px;
         line-height: 2;
+    }
+}
+
+@media (max-width: 650px) {
+    #toRegister .choice-person {
+        font-size: 12px;
+    }
+    .form-wrapper #toRegister {
+        width: 100%;
+        margin: 0 30px;
+    }
+    #toRegister .inputs {
+        flex-direction: column;
+    }
+    #toRegister .inputs>div {
+        width: 100%!important;
+        margin: 0!important;
+    }
+}
+
+@media (max-width: 420px) {
+    .form-wrapper {
+        margin: 0;
+    }
+    .form-wrapper form {
+        width: 100%;
+        margin: 0 30px;
     }
 }
 

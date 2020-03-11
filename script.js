@@ -25,7 +25,7 @@ $(document).ready(function () {
                 $('.overlay').fadeOut();
 
                 //удаление события закрытия модального окна
-                $(this).off('mouseup');
+                $(this).off('mousedown');
             }
         });
     });
@@ -58,4 +58,11 @@ $(document).ready(function () {
         $('#enter').css('display', 'block');
         $('#toRegister').css('display', 'none');
     });
+
+    // Кнопка "Меню?"
+    $('.mobile-navbar').click(() => {
+        $('header nav .navbar>ul').toggleClass('d-none');
+    });
+
+    
 });
