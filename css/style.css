@@ -845,7 +845,7 @@ header nav .buttons .buttons-enter:hover {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     height: 726px;
-    background: url(/img/Group-form.png);
+    background: url('../img/Group-form.png');
     align-items: center;
     background-size: cover;
 }
