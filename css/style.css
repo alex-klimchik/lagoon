@@ -536,7 +536,11 @@ header nav .buttons .buttons-enter:hover {
 
 /* ------------ About us ---------------- */
 
+.aboutUs{
+    margin: 100px 0 70px;
+}
 .bg-block {
+    position: relative;
     background-color: #ffffff;
     background-repeat: no-repeat;
     background-size: contain;
@@ -545,11 +549,68 @@ header nav .buttons .buttons-enter:hover {
     background-blend-mode: hard-light;
 }
 
+.scroll-wrap{
+    width: 20px;
+    top: 0;
+    right: 0;
+    position: absolute;
+
+}
+.scroll-b{
+    position: relative;
+}
+.slidecontainer {
+    transform: rotate(90deg);
+    width: 100%; /* Width of the outside container */
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 325px;
+    height: 1px;
+    border-radius: 5px;
+    background: #DADADA;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #1AE5BE;;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .aboutUs-title h2,
 .webmaster-title h2 {
-    font-family: Avenir Next Cyr;
+    font-family:'Avenir Next Cyr Regular';
     font-style: normal;
-    font-weight: 700;
     font-size: 36px;
     line-height: 44px;
     color: #777777;
@@ -558,7 +619,7 @@ header nav .buttons .buttons-enter:hover {
 
 .aboutUs-content p,
 .aboutUs-content p {
-    font-family: Avenir Next Cyr;
+    font-family: 'Avenir Next Cyr Regular';
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -567,10 +628,9 @@ header nav .buttons .buttons-enter:hover {
 }
 
 .aboutUs-ft p {
-    font-family: Avenir Next Cyr;
+    font-family: 'Avenir Next Cyr Bold';
     text-align: center;
     font-style: normal;
-    font-weight: 700;
     font-size: 24px;
     line-height: 35px;
     color: #404040;
@@ -623,7 +683,7 @@ header nav .buttons .buttons-enter:hover {
 }
 
 .main-text {
-    padding: 0px 15px 0px 15px;
+    padding: 0 15px 0 15px;
     font-family: 'Avenir Next Cyr Regular';
     font-style: normal;
     font-weight: normal;
@@ -639,15 +699,15 @@ header nav .buttons .buttons-enter:hover {
 
 .title-text {
     font-family: 'Avenir Next Cyr Regular';
-    padding: 20px 0px 0px 17px;
+    padding: 20px 0 0 17px;
     font-style: normal;
-    font-weight: 750;
     font-size: 26px;
     line-height: 44px;
     color: #777777;
 }
 
 .adv-main {
+    position: relative;
     padding: 20px 0;
     display: flex;
     justify-content: space-evenly;
@@ -688,6 +748,7 @@ header nav .buttons .buttons-enter:hover {
 }
 
 .bg-master {
+    margin-top: 65px;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("../img/bg-master.png");
@@ -716,7 +777,7 @@ header nav .buttons .buttons-enter:hover {
 }
 
 .webmaster-ft {
-    font-family: Avenir Next Cyr;
+    font-family: 'Avenir Next Cyr Bold';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -752,9 +813,9 @@ header nav .buttons .buttons-enter:hover {
 }
 
 .web-skills-content p {
-    font-family: Avenir Next Cyr;
+    font-family:  'Avenir Next Cyr Regular';
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 18px;
     line-height: 22px;
     color: #282626;
@@ -777,6 +838,12 @@ header nav .buttons .buttons-enter:hover {
     .webmaster-icon img {
         width: 65px;
         height: 65px;
+    }
+    .aboutUs{
+        margin: 75px 0 45px;
+    }
+    .scroll-wrap {
+        right: -45px;
     }
 }
 
@@ -812,6 +879,16 @@ header nav .buttons .buttons-enter:hover {
         background-size: cover;
         background-image: url("../img/bg-master-mob.png");
     }
+    .aboutUs {
+        margin: 45px 0 0px;
+    }
+    .webmaster-wrap {
+        padding: 5px 0;
+    }
+    .scroll-wrap {
+        display: none;
+    }
+
 }
 
 @media ( max-width: 556px) {
