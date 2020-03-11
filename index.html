@@ -22,6 +22,7 @@
 <body>
     <div class="overlay" style="display: none;">
         <div class="form-wrapper">
+
             <form id="enter" action="">
                 <div class="btns">
                     <span class="active">Вход</span>
@@ -36,24 +37,42 @@
                     <button>Вход</button>
                 </div>
             </form>
+
             <form id="toRegister" action="">
                 <div class="btns">
                     <span class="">Вход</span>
                     <span class="active">регистрация</span>
                 </div>
-                <label for="web">Web</label>
-                <input name="a" id="web" type="radio" value="1" checked>
-                <label for="adv">adv</label>
-                <input name="a" id="adv" type="radio" value="2">
-                <input type="text" placeholder="Логин" required>
-                <input type="password" placeholder="Пароль" required>
-                <div class="forgot">
-                    <span id="forgotPassword">Забыли пароль?</span>
+                <div class="choice-person"><span>
+                        <input name="choice-person_input" id="advertizer" type="radio" value="1" checked>
+                        <label for="advertizer">Рекламодатель</label>
+                    </span>
+                    <span>
+                        <input name="choice-person_input" id="web" type="radio" value="2">
+                        <label for="web">Веб - мастер</label>
+                    </span>
+                </div>
+
+                <div class="inputs">
+                    <div>
+                        <input type="text" placeholder="Логин">
+                        <input type="text" placeholder="Имя">
+                        <input type="text" placeholder="Пароль">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="E-mail">
+                        <select name="" id="">
+                            <option value="skype">Skype</option>
+                            <option value="telegram">Telegram</option>
+                        </select>
+                        <input type="text" placeholder="Повторить пароль">
+                    </div>
                 </div>
                 <div class="mainBtn">
-                    <button>Вход</button>
+                    <button>Регистрация</button>
                 </div>
             </form>
+
             <form id="recovery" action="">
                 <p class="recovery-text">ВОССТАНОВЛЕНИЕ ПАРОЛЯ</p>
                 <input type="text" name="email" placeholder="Введите Ваш E-mail">

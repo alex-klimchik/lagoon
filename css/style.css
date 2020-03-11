@@ -41,11 +41,9 @@ body {
 
 .form-wrapper {
     cursor: default;
-    width: 100%;
-    max-width: 382px;
     min-height: 371px;
     border-radius: 10px;
-    background: linear-gradient(180deg, rgba(28, 227, 191, 1) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(180deg, rgba(28, 227, 191, 1) 0%, rgba(255, 255, 255, 1) 8%, rgba(255, 255, 255, 1) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,13 +52,14 @@ body {
 
 .form-wrapper form {
     width: 240px;
+    margin: 0 70px;
 }
 
 #recovery, #enter, #toRegister {
     display: none;
 }
 
-.form-wrapper form input {
+.form-wrapper form input[type="text"], .form-wrapper form input[type="password"] {
     width: 100%;
     border: 2px solid #D4E1F4;
     box-sizing: border-box;
@@ -90,6 +89,7 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    justify-content: center;
 }
 
 .form-wrapper form .btns span {
@@ -171,6 +171,59 @@ body {
     color: #FF3737;
     text-align: center;
     visibility: hidden;
+}
+
+/* toRefister */
+
+.form-wrapper #toRegister {
+    width: 510px;
+    margin: 0 55px;
+}
+
+#toRegister .choice-person input[type="radio"] {
+    display: none;
+}
+
+#toRegister .choice-person input[type="radio"]:checked~label {
+    color: #1AE5BE;
+    border-bottom: 1px solid #B7C5FF;
+}
+
+#toRegister .choice-person {
+    font-size: 18px;
+    line-height: 22px;
+    font-family: 'Avenir Next Cyr Regular';
+    display: flex;
+    justify-content: space-around;
+}
+
+#toRegister .choice-person label {
+    cursor: pointer;
+}
+
+#toRegister .inputs {
+    display: flex;
+}
+
+#toRegister .inputs>div:first-child {
+    width: 46%;
+    margin-right: 4%;
+}
+
+#toRegister .inputs>div:last-child {
+    width: 46%;
+    margin-left: 4%;
+}
+
+#toRegister .inputs select {
+    width: 100%;
+    border: 2px solid #D4E1F4;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 45px;
+    padding: 0 10px;
+    outline: none;
+    margin-bottom: 22px;
 }
 
 /* ------------ Header ------------------ */
