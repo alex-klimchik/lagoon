@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPA сеть Lagoon</title>
-
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
@@ -72,8 +72,7 @@
                 <div class="policy">
                     <input type="checkbox" name="privacy">
                     <p>Я принимаю условия
-                        <a href="#">Пользовательского соглашения </a>
-                        и даю своё согласие на обработку персональных данных, определенных
+                        <a href="#">Пользовательского соглашения </a> и даю своё согласие на обработку персональных данных, определенных
                         <a href="#">Политикой конфиденциальности </a>
                     </p>
                 </div>
@@ -290,7 +289,7 @@
                 </div>
             </div>
         </section>
-        <section class="form">
+        <section class="form" id="form-bk">
             <div class="bk-form">
                 <div class="bk-form-header"></div>
                 <div class="bk-form-title">
@@ -331,8 +330,20 @@
                                 <div class="bk-form-group">
 
                                     <input type="email" class="form-control input-bk-forms" placeholder="E-mail">
-
-                                    <input type="text" class="form-control input-bk-forms" placeholder="Skype">
+                                    <div class="input-group select-type">
+                                        <div class="input-group-prepend">
+                                            <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                                            
+                                     
+                                          <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Skype</a>
+                                            <a class="dropdown-item" href="#">Telegram</a>
+                
+                                          </div>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Skype">
+                                      </div>
+                                    <!-- <input type="text" class="form-control input-bk-forms" placeholder="Skype"> -->
 
                                     <input type="password" class="form-control input-bk-forms" placeholder="Повторить пароль">
 
@@ -347,33 +358,33 @@
                             </div>
                             <div class="center">
                                 <button type="submit" class="btn btn-bk-forms">Регистрация</button>
-                            </div>
+                                        </div>
                         </form>
-                    </div>
-                    <div class="tab-pane container fade" id="menu1">
-                        <form action="/action_page.php">
+                        </div>
+                        <div class="tab-pane container fade" id="menu1">
+                            <form action="/action_page.php">
 
-                            <div class="bl-forms">
-                                <div class="bk-form-group">
+                                <div class="bl-forms">
+                                    <div class="bk-form-group">
 
-                                    <input type="text" class="form-control input-bk-forms" placeholder="Логин">
+                                        <input type="text" class="form-control input-bk-forms" placeholder="Логин">
 
-                                    <input type="password" class="form-control input-bk-forms" placeholder="Пароль">
+                                        <input type="password" class="form-control input-bk-forms" placeholder="Пароль">
 
+
+                                    </div>
 
                                 </div>
 
-                            </div>
+                                <div class="center">
+                                    <button type="submit" class="btn btn-bk-forms">Вход</button>
+                                </div>
+                            </form>
+                        </div>
 
-                            <div class="center">
-                                <button type="submit" class="btn btn-bk-forms">Вход</button>
-                            </div>
-                        </form>
-                    </div>
+                        </div>
 
-                </div>
-
-            </div>
+                        </div>
 
         </section>
     </main>
@@ -388,16 +399,16 @@
                 <div class="bottom-menu">
 
                     <ul>
-                        <li><a>О НАС</a></li>
-                        <li><a>РЕКЛАМОДАТЕЛЯМ</a></li>
+                        <li><a href="#aboutUs">О НАС</a></li>
+                        <li><a href="#advertisers">РЕКЛАМОДАТЕЛЯМ</a></li>
                     </ul>
 
                 </div>
                 <div class="bottom-menu">
 
                     <ul>
-                        <li><a>ВЕБ-МАСТЕРАМ</a></li>
-                        <li><a>РЕГИСТРАЦИЯ</a></li>
+                        <li><a href="#webmasters">ВЕБ-МАСТЕРАМ</a></li>
+                        <li><a href="#form-bk">РЕГИСТРАЦИЯ</a></li>
                     </ul>
 
                 </div>
@@ -424,7 +435,9 @@
             </div>
 
         </div>
-        <div class="container bottom-name-company"><a href="#">© LAGOON 2020</a></div>
+        <div class="container bottom-name-company">
+            <p>© LAGOON 2020</p>
+        </div>
     </footer>
 
 

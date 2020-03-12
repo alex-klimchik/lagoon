@@ -552,6 +552,10 @@ header nav .buttons .buttons-enter:hover {
 
 /* ------------ About us ---------------- */
 
+.aboutUs-title {
+    padding: 20px;
+}
+
 .bg-block {
     background-color: #ffffff;
     background-repeat: no-repeat;
@@ -913,6 +917,18 @@ header nav .buttons .buttons-enter:hover {
     justify-content: space-around;
 }
 
+.select-type button {
+    font-family: 'Avenir Next Cyr Light';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    border: 2px solid #959595!important;
+    margin-top: 25px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.select-type input,
 .input-bk-forms {
     font-family: 'Avenir Next Cyr Light';
     font-style: normal;
@@ -1090,7 +1106,7 @@ footer ul li {
     align-items: center;
 }
 
-.bottom-menu {
+.bottom-menu a {
     color: #FDFDFD;
 }
 
