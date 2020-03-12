@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPA сеть Lagoon</title>
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
@@ -55,24 +55,32 @@
 
                 <div class="inputs">
                     <div>
-                        <input type="text" placeholder="Логин">
-                        <input type="text" placeholder="Имя">
-                        <input type="text" placeholder="Пароль">
+                        <input type="text" name='login' placeholder="Логин">
+                        <input type="text" name="name" placeholder="Имя">
+                        <input type="text" name="password" placeholder="Пароль">
                     </div>
                     <div>
-                        <input type="e-mail" placeholder="E-mail">
-                        <!-- <select name="" id="">
-                            <option value="skype">Skype</option>
-                            <option value="telegram">Telegram</option>
-                        </select> -->
-                        <input type="text" placeholder="Skype">
-                        <input type="text" placeholder="Повторить пароль">
+                        <input type="e-mail" name="e-mail" placeholder="E-mail">
+                        <div class="input-group select-type modal-select-type">
+                            <div class="input-group-prepend">
+                                <button type="button" class="btn btn-outline-secondary dropdown-toggle"
+                                    data-toggle="dropdown">
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#" value="Skype">Skype</a>
+                                    <a class="dropdown-item" href="#" value="Telegram">Telegram</a>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control input-bk-forms" name="skypeOrTg" placeholder="Skype">
+                        </div>
+                        <input type="text" name="confirm_password" placeholder="Повторить пароль">
                     </div>
                 </div>
                 <div class="policy">
                     <input type="checkbox" name="privacy">
                     <p>Я принимаю условия
-                        <a href="#">Пользовательского соглашения </a> и даю своё согласие на обработку персональных данных, определенных
+                        <a href="#">Пользовательского соглашения </a> и даю своё согласие на обработку персональных
+                        данных, определенных
                         <a href="#">Политикой конфиденциальности </a>
                     </p>
                 </div>
@@ -109,9 +117,10 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <ul class="d-none d-md-flex">
+                    <span class="menu_close"></span>
                     <li><a href="#aboutUs">О нас</a></li>
                     <li><a href="#advertisers">Рекламодателям</a></li>
-                    <li><a href="#webmasters">Веб-мастерам</a></li>
+                    <li><a href="#webmasters-mob">Веб-мастерам</a></li>
                 </ul>
             </div>
             <div class="buttons">
@@ -151,24 +160,27 @@
         <section id="aboutUs">
             <div class="container aboutUs">
 
-                        <div class="aboutUs-wrap bg-block">
-                            <div class="aboutUs-title">
-                                <h2>О нас</h2>
-                            </div>
-                            <div class="aboutUs-content">
-                                <p>Основная задача нашей компании - предоставить нашим партнерам наиболее подходящие маркетинговые решения, разработанные специально для их индивидуальных потребностей.
-                                </p>
-                                <p>Мы разработали собственную платформу, которая постоянно обновляется и дополняется новым функционалом, ориентированным на успешный результат рекламных кампаний.</p>
-                            </div>
-                            <div class="aboutUs-ft">
-                                <p>Сотрудничайте с нами, чтобы получить персональную поддержку, необходимую для максимизации ваших доходов.</p>
-                            </div>
-                        </div>
-                        <div class="scroll-wrap">
-                            <div class="slidecontainer">
-                                <input type="range" min="1" max="100" value="50" class="slider-two">
-                            </div>
-                        </div>
+                <div class="aboutUs-wrap bg-block">
+                    <div class="aboutUs-title">
+                        <h2>О нас</h2>
+                    </div>
+                    <div class="aboutUs-content">
+                        <p>Основная задача нашей компании - предоставить нашим партнерам наиболее подходящие
+                            маркетинговые решения, разработанные специально для их индивидуальных потребностей.
+                        </p>
+                        <p>Мы разработали собственную платформу, которая постоянно обновляется и дополняется
+                            новым функционалом, ориентированным на успешный результат рекламных кампаний.</p>
+                    </div>
+                    <div class="aboutUs-ft">
+                        <p>Сотрудничайте с нами, чтобы получить персональную поддержку, необходимую для
+                            максимизации ваших доходов.</p>
+                    </div>
+                </div>
+                <div class="scroll-wrap">
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="50" class="slider-two">
+                    </div>
+                </div>
 
 
             </div>
@@ -178,9 +190,13 @@
 
                 <div class="adver-bk">
                     <p class="title-text">РЕКЛАМОДАТЕЛЯМ</p>
-                    <p class="main-text">Мы специализируемся на привлечении целевых клиентов и устраняем все источники мошеннического трафика, благодаря чему вы получаете высококачественный, стабильный и масштабируемый трафик.
+                    <p class="main-text">Мы специализируемся на привлечении целевых клиентов и устраняем все источники
+                        мошеннического трафика, благодаря чему вы получаете высококачественный, стабильный и
+                        масштабируемый трафик.
                     </p>
-                    <p class="main-text">Наша команда маркетологов имеет большой опыт создания конкурентоспособных предложений на основе мониторинга рынка и тестирования производительности продвижения в различных источниках трафика, что помогает достигать высоких результатов
+                    <p class="main-text">Наша команда маркетологов имеет большой опыт создания конкурентоспособных
+                        предложений на основе мониторинга рынка и тестирования производительности продвижения в
+                        различных источниках трафика, что помогает достигать высоких результатов
                         и качественный пользовательский опыт.</p>
                     <p class="main-text bl-text"> <b>Присоединяйтесь к нам уже сегодня для долгосрочного
                             сотрудничества!</b></p>
@@ -333,44 +349,49 @@
                     <div class="tab-pane container active" id="home">
                         <form action="/action_page.php">
                             <div class="choice-person"><span>
-                                <input name="choice-person_input_two" id="advertizer2" type="radio" value="1" checked>
-                                <label for="advertizer2">Рекламодатель</label>
-                            </span>
+                                    <input name="choice-person_input_two" id="advertizer2" type="radio" value="adv"
+                                        checked>
+                                    <label for="advertizer2">Рекламодатель</label>
+                                </span>
                                 <span>
-                                <input name="choice-person_input_two" id="web2" type="radio" value="2">
-                                <label for="web2">Веб - мастер</label>
-                            </span>
+                                    <input name="choice-person_input_two" id="web2" type="radio" value="web">
+                                    <label for="web2">Веб - мастер</label>
+                                </span>
                             </div>
                             <div class="bl-forms">
 
                                 <div class="bk-form-group">
 
-                                    <input type="text" class="form-control input-bk-forms" placeholder="Логин">
+                                    <input type="text" class="form-control input-bk-forms" name='login'
+                                        placeholder="Логин">
 
-                                    <input type="text" class="form-control input-bk-forms" placeholder="Имя">
+                                    <input type="text" class="form-control input-bk-forms" name="name"
+                                        placeholder="Имя">
 
-                                    <input type="password" class="form-control input-bk-forms" placeholder="Пароль">
+                                    <input type="password" class="form-control input-bk-forms" name="password"
+                                        placeholder="Пароль">
                                 </div>
 
                                 <div class="bk-form-group">
 
-                                    <input type="email" class="form-control input-bk-forms" placeholder="E-mail">
+                                    <input type="email" class="form-control input-bk-forms" name="e-mail"
+                                        placeholder="E-mail">
                                     <div class="input-group select-type">
                                         <div class="input-group-prepend">
-                                            <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
-                                            
-                                     
-                                          <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Skype</a>
-                                            <a class="dropdown-item" href="#">Telegram</a>
-                
-                                          </div>
+                                            <button type="button" class="btn btn-outline-secondary dropdown-toggle"
+                                                data-toggle="dropdown">
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#" value="Skype">Skype</a>
+                                                <a class="dropdown-item" href="#" value="Telegram">Telegram</a>
+                                            </div>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="Skype">
-                                      </div>
-                                    <!-- <input type="text" class="form-control input-bk-forms" placeholder="Skype"> -->
+                                        <input type="text" class="form-control input-bk-forms" name="skypeOrTg"
+                                            placeholder="Skype">
+                                    </div>
 
-                                    <input type="password" class="form-control input-bk-forms" placeholder="Повторить пароль">
+                                    <input type="password" class="form-control input-bk-forms" name="confirm_password"
+                                        placeholder="Повторить пароль">
 
                                 </div>
                             </div>
@@ -383,33 +404,33 @@
                             </div>
                             <div class="center">
                                 <button type="submit" class="btn btn-bk-forms">Регистрация</button>
-                                        </div>
+                            </div>
                         </form>
-                        </div>
-                        <div class="tab-pane container fade" id="menu1">
-                            <form action="/action_page.php">
+                    </div>
+                    <div class="tab-pane container fade" id="menu1">
+                        <form action="/action_page.php">
 
-                                <div class="bl-forms">
-                                    <div class="bk-form-group">
+                            <div class="bl-forms">
+                                <div class="bk-form-group">
 
-                                        <input type="text" class="form-control input-bk-forms" placeholder="Логин">
+                                    <input type="text" class="form-control input-bk-forms" placeholder="Логин">
 
-                                        <input type="password" class="form-control input-bk-forms" placeholder="Пароль">
+                                    <input type="password" class="form-control input-bk-forms" placeholder="Пароль">
 
-
-                                    </div>
 
                                 </div>
 
-                                <div class="center">
-                                    <button type="submit" class="btn btn-bk-forms">Вход</button>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
 
-                        </div>
+                            <div class="center">
+                                <button type="submit" class="btn btn-bk-forms">Вход</button>
+                            </div>
+                        </form>
+                    </div>
 
-                        </div>
+                </div>
+
+            </div>
 
         </section>
     </main>
