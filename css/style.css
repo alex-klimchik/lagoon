@@ -23,7 +23,6 @@ body {
     position: relative;
 }
 
-
 /* ------------- Form --------------- */
 
 .overlay {
@@ -56,15 +55,11 @@ body {
     margin: 0 70px;
 }
 
-#recovery,
-#enter,
-#toRegister {
+#recovery, #enter, #toRegister {
     display: none;
 }
 
-.form-wrapper form input[type="text"],
-.form-wrapper form input[type="password"],
-.form-wrapper form input[type="e-mail"] {
+.form-wrapper form input[type="text"], .form-wrapper form input[type="password"], .form-wrapper form input[type="e-mail"] {
     width: 100%;
     border: 2px solid #D4E1F4;
     box-sizing: border-box;
@@ -81,8 +76,7 @@ body {
     line-height: 22px;
 }
 
-.form-wrapper form input[type="text"],
-.form-wrapper form input[type="e-mail"] {
+.form-wrapper form input[type="text"], .form-wrapper form input[type="e-mail"] {
     margin-bottom: 22px;
 }
 
@@ -177,7 +171,6 @@ body {
     visibility: hidden;
 }
 
-
 /* toRefister */
 
 .form-wrapper #toRegister {
@@ -247,6 +240,36 @@ body {
     color: #e5e5e5;
 }
 
+/* menu_close */
+
+.menu_close {
+    display: none;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.menu_close:before, .menu_close:after {
+    position: absolute;
+    left: 9px;
+    content: ' ';
+    height: 20px;
+    width: 2px;
+    background-color: #1AE5BE;
+    ;
+}
+
+.menu_close:before {
+    transform: rotate(45deg);
+}
+
+.menu_close:after {
+    transform: rotate(-45deg);
+}
 
 /* ------------ Header ------------------ */
 
@@ -286,7 +309,6 @@ header nav .navbar {
 
 header nav .navbar ul {
     list-style: none;
-    display: flex;
     width: 370px;
     padding: 0;
     margin: 0;
@@ -319,8 +341,7 @@ header nav .buttons .buttons-language button {
     margin: 0 2px;
 }
 
-.buttons-language_active,
-header nav .buttons .buttons-language button:hover {
+.buttons-language_active, header nav .buttons .buttons-language button:hover {
     font-family: 'Avenir Next Cyr Bold'!important;
     background-color: #1AE5BE!important;
     border-radius: 10px;
@@ -468,8 +489,10 @@ header nav .buttons .buttons-enter:hover {
 }
 
 @media (max-width: 767px) {
-    .mobile-enter,
-    .mobile-navbar {
+    .menu_close {
+        display: block;
+    }
+    .mobile-enter, .mobile-navbar {
         width: 44px;
         height: 44px;
         display: flex;
@@ -525,6 +548,25 @@ header nav .buttons .buttons-enter:hover {
         justify-content: center;
         text-align: center;
     }
+    header nav .navbar>ul {
+        position: absolute;
+        top: 62px;
+        background: #fff;
+        left: -15px;
+        width: 225px;
+    }
+    header nav .navbar>ul li a {
+        color: #000000;
+        border-bottom: 1px solid #C4C4C4;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 45px;
+        padding-left: 24px;
+    }
+    header nav .navbar>ul li:last-child a {
+        border-bottom: 1px solid #C4C4C4;
+    }
 }
 
 @media (max-width: 555px) {
@@ -538,6 +580,33 @@ header nav .buttons .buttons-enter:hover {
     }
 }
 
+@media (max-width: 650px) {
+    #toRegister .choice-person {
+        font-size: 12px;
+    }
+    .form-wrapper #toRegister {
+        width: 100%;
+        margin: 0 30px;
+    }
+    #toRegister .inputs {
+        flex-direction: column;
+    }
+    #toRegister .inputs>div {
+        width: 100%!important;
+        margin: 0!important;
+    }
+}
+
+@media (max-width: 420px) {
+    .form-wrapper {
+        margin: 0;
+    }
+    .form-wrapper form {
+        width: 100%;
+        margin: 0 30px;
+    }
+}
+
 @media (max-width: 360px) {
     .header-wrapper .header-text p {
         font-size: 17px;
@@ -548,7 +617,6 @@ header nav .buttons .buttons-enter:hover {
         line-height: 2;
     }
 }
-
 
 /* ------------ About us ---------------- */
 
@@ -565,8 +633,7 @@ header nav .buttons .buttons-enter:hover {
     background-blend-mode: hard-light;
 }
 
-.aboutUs-title h2,
-.webmaster-title h2 {
+.aboutUs-title h2, .webmaster-title h2 {
     font-family: Avenir Next Cyr;
     font-style: normal;
     font-weight: 700;
@@ -576,8 +643,7 @@ header nav .buttons .buttons-enter:hover {
     padding-left: 20px;
 }
 
-.aboutUs-content p,
-.aboutUs-content p {
+.aboutUs-content p, .aboutUs-content p {
     font-family: Avenir Next Cyr;
     font-style: normal;
     font-weight: normal;
@@ -596,7 +662,6 @@ header nav .buttons .buttons-enter:hover {
     color: #404040;
     padding: 24px 0 40px;
 }
-
 
 /* ------------ Advertisers ------------- */
 
@@ -709,7 +774,6 @@ header nav .buttons .buttons-enter:hover {
     }
 }
 
-
 /* ------------ Webmasters ---------------*/
 
 .webmasters-mob {
@@ -789,15 +853,12 @@ header nav .buttons .buttons-enter:hover {
     color: #282626;
 }
 
-
 /* ------------ Form ---------------------*/
-
 
 /* ------------ Footer -------------------*/
 
 @media ( max-width: 998px) {
-    .web-content-wrap,
-    .web-skills-content {
+    .web-content-wrap, .web-skills-content {
         width: 90%;
     }
     .webmaster-skills-wrap {
@@ -819,8 +880,7 @@ header nav .buttons .buttons-enter:hover {
     .bg-master {
         background-image: none;
     }
-    .web-content-wrap,
-    .web-skills-content {
+    .web-content-wrap, .web-skills-content {
         width: 100%;
     }
     .web-content-wrap {
@@ -844,8 +904,7 @@ header nav .buttons .buttons-enter:hover {
 }
 
 @media ( max-width: 556px) {
-    .aboutUs-title h2,
-    .webmaster-title h2 {
+    .aboutUs-title h2, .webmaster-title h2 {
         padding-left: 0;
     }
     .bg-block {
@@ -928,8 +987,7 @@ header nav .buttons .buttons-enter:hover {
     border-radius: 10px 0px 0px 10px;
 }
 
-.select-type input,
-.input-bk-forms {
+.select-type input, .input-bk-forms {
     font-family: 'Avenir Next Cyr Light';
     font-style: normal;
     font-weight: normal;
@@ -949,20 +1007,17 @@ header nav .buttons .buttons-enter:hover {
     font-size: 18px;
 }
 
-.input-bk-forms::-webkit-input-placeholder,
-#select-social-network {
+.input-bk-forms::-webkit-input-placeholder, #select-social-network {
     /* Edge */
     color: #adadad;
 }
 
-.input-bk-forms:-ms-input-placeholder,
-#select-social-network {
+.input-bk-forms:-ms-input-placeholder, #select-social-network {
     /* Internet Explorer 10-11 */
     color: #adadad;
 }
 
-.input-bk-forms::placeholder,
-#select-social-network {
+.input-bk-forms::placeholder, #select-social-network {
     color: #adadad;
 }
 
@@ -1021,8 +1076,7 @@ header nav .buttons .buttons-enter:hover {
     justify-content: space-around;
 }
 
-.form .nav-tabs .nav-item.show .nav-link,
-.nav-tabs .nav-link.active {
+.form .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     color: #777777;
     font-size: 24px;
     line-height: 29px;
@@ -1039,15 +1093,13 @@ header nav .buttons .buttons-enter:hover {
     cursor: pointer;
 }
 
-.form .nav-tabs .nav-item.show .nav-link,
-.form .nav-tabs .nav-link.active {
+.form .nav-tabs .nav-item.show .nav-link, .form .nav-tabs .nav-link.active {
     color: #495057;
     background-color: #fff;
     border-color: #ffffff;
 }
 
-.form .nav-tabs .nav-link:focus,
-.form .nav-tabs .nav-link:hover {
+.form .nav-tabs .nav-link:focus, .form .nav-tabs .nav-link:hover {
     border-color: #f0f8ff00 white #888888;
 }
 
@@ -1072,7 +1124,6 @@ header nav .buttons .buttons-enter:hover {
         display: block;
     }
 }
-
 
 /* ------------ Footer -------------------*/
 
