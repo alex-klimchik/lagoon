@@ -26,17 +26,16 @@ body {
 /* ------------- Form --------------- */
 
 .overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 101;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
     cursor: pointer;
+    overflow: auto;
 }
 
 .form-wrapper {
@@ -47,7 +46,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 15px;
+    margin: 0 auto;
+    width: min-content;
+    margin-top: 10%;
 }
 
 .form-wrapper form {
@@ -489,6 +490,9 @@ header nav .buttons .buttons-enter:hover {
 }
 
 @media (max-width: 767px) {
+    .overlay {
+        display: block;
+    }
     .menu_close {
         display: block;
     }
@@ -598,9 +602,6 @@ header nav .buttons .buttons-enter:hover {
 }
 
 @media (max-width: 420px) {
-    .form-wrapper {
-        margin: 0;
-    }
     .form-wrapper form {
         width: 100%;
         margin: 0 30px;
